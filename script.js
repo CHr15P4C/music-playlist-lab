@@ -10,19 +10,19 @@
 
 // TODO: Create an array with at least 5 song titles (strings)
 // MDN Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
-let mySongs = [
+let mySongs = ["Suavemente", "Mediterraneo", "Second Cup of Coffee", "Electric Eye", "All Caps"
     // Add your favorite song titles here as strings
     // Example: "Song Title"
 ];
 
 // TODO: Create an array with at least 5 artist names
-let myArtists = [
+let myArtists = ["Elvis Crespo", "Joan Manuel Serrat", "Gordon Lightfoot", "Judas Priest", "MF Doom"
     // Add artist names here as strings
     // Example: "Artist Name"
 ];
 
 // TODO: Create an array with music genres
-let genres = [
+let genres = ["Merengue", "Spanish Pop", "Canadian Folk", "Heavy Metal", "Hip Hop"
     // Add music genres here as strings
     // Example: "Rock", "Pop", "Jazz"
 ];
@@ -40,15 +40,18 @@ let favorites = [
 function displaySelectedSongs() {
     // TODO: Get the first song from mySongs (index 0)
     // MDN Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#accessing_array_elements
-    let firstSong = // Your code here
+    let firstSong = mySongs[0]
+        // Your code here
 
     // TODO: Get the last song from mySongs
     // HINT: Use mySongs.length - 1 for the last index
-    let lastSong = // Your code here
+    let lastSong = mySongs[mySongs.length -1]
+        // Your code here
 
     // TODO: Get the middle song from mySongs
     // HINT: Use Math.floor(mySongs.length / 2) for middle index
-    let middleSong = // Your code here
+    let middleSong = mySongs[Math.floor(mySongs.length / 2)]
+        // Your code here
 
     // DOM operations handled for you - focus on the array logic above
     document.getElementById('first-song').textContent = firstSong;
