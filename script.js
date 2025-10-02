@@ -10,22 +10,22 @@
 
 // TODO: Create an array with at least 5 song titles (strings)
 // MDN Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
-let mySongs = ["Suavemente", "Mediterraneo", "Second Cup of Coffee", "Electric Eye", "All Caps"
+let mySongs = ["Suavemente", "Mediterraneo", "Second Cup of Coffee", "Electric Eye", "All Caps"];
     // Add your favorite song titles here as strings
     // Example: "Song Title"
-];
+
 
 // TODO: Create an array with at least 5 artist names
-let myArtists = ["Elvis Crespo", "Joan Manuel Serrat", "Gordon Lightfoot", "Judas Priest", "MF Doom"
+let myArtists = ["Elvis Crespo", "Joan Manuel Serrat", "Gordon Lightfoot", "Judas Priest", "MF Doom"];
     // Add artist names here as strings
     // Example: "Artist Name"
-];
+
 
 // TODO: Create an array with music genres
-let genres = ["Merengue", "Spanish Pop", "Canadian Folk", "Heavy Metal", "Hip Hop"
+let genres = ["Merengue", "Spanish Pop", "Canadian Folk", "Heavy Metal", "Hip Hop"];
     // Add music genres here as strings
     // Example: "Rock", "Pop", "Jazz"
-];
+
 
 // TODO: Create an empty array for favorite songs (this should start empty)
 let favorites = [
