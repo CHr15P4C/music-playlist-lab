@@ -381,6 +381,80 @@ function separateFirstSong() {
     showMessage("✅ First song: '" + first + "', Other songs: " + others.length + " using destructuring!");
 }
 
+
+//Bonus Codes
+//////////////////////////////////////////////////////////////////////////////////
+
+function deleteSpecificSong() {
+    if (mySongs.length === 0) {
+        showMessage("❌ Step 1 incomplete: No songs left to delete.");
+        return;
+    }
+    let deleteTerm = document.getElementById('delete-input').value;
+    if (!deleteTerm.trim()) {
+        showMessage("❌ Please enter a song title to delete");
+        return;
+    }
+    
+    let exists = mySongs.includes(deleteTerm);
+    if (exists) {
+
+        mySongs.splice(mySongs.indexOf(deleteTerm), 1);
+        showMessage("✅ Song '" + deleteTerm + "' has been deleted with .indexOf and .splice");
+        return;
+    } else {
+        showMessage("❌ Song '" + deleteTerm + "' does not exist using .includes()!");
+        return;
+    }
+}
+
+function reorderAlphabetically() {
+if (mySongs.length === 0) {
+        showMessage("❌ Step 1 incomplete: No songs left to delete.");
+        return;
+    } 
+    mySongs.sort();
+    let songsOrderedHTML = "<h3>All Songs, sorted (using .forEach, .sort()):</h3>";
+    mySongs.forEach(function(song, index){
+        songsOrderedHTML += "<div class='song-item'>" + (index + 1) + ". " + song + "</div>";
+    })
+    document.getElementById('all-songs-ordered').innerHTML = songsOrderedHTML;
+    showMessage("✅ Displayed all songs using .forEach()!");
+
+}
+
+function addSpecificSong() {
+    let addTerm = document.getElementById('add-input').value;
+    if (!addTerm.trim()) {
+        showMessage("❌ Please enter a song title to add");
+        return;
+    }
+    mySongs.push(addTerm)
+
+     if (mySongs.length === 0) {
+        showMessage("❌ Step 1 incomplete: Please add songs to mySongs array first");
+        return;
+    }
+    updateDisplays();
+    showMessage("✅ Added " + addTerm + " to the end using .push()! New length: " + mySongs.length);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ===========================================
 // HELPER FUNCTIONS (PROVIDED FOR YOU)
 // ===========================================
