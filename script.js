@@ -227,6 +227,11 @@ function displayAllSongsForEach() {
     // TODO: Use .forEach() method to go through all songs
     // MDN Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
     // Your code here - use mySongs.forEach(function(song, index) { ... })
+    mySongs.forEach(function(song, index){
+        songsHTML += "<div class='song-item'>" + (index + 1) + ". " + song + "</div>";
+    })
+
+        
 
     // Inside the forEach function, add each song to songsHTML like this:
     // songsHTML += "<div class='song-item'>" + (index + 1) + ". " + song + "</div>";
@@ -246,7 +251,11 @@ function createFormattedSongList() {
 
     // TODO: Use .map() method to create an array of formatted strings
     // MDN Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
-    let formattedSongs = // Your code here - use mySongs.map(function(song, index) { ... })
+    let formattedSongs = mySongs.map(function(song, index){
+        return (index + 1) + ". " + song + " ♫";
+
+    })
+        // Your code here - use mySongs.map(function(song, index) { ... })
 
     // Inside the map function, return a formatted string like:
     // return (index + 1) + ". " + song + " ♫";
@@ -255,6 +264,9 @@ function createFormattedSongList() {
 
     // TODO: Use .forEach() to display the formatted songs array
     // Your code here - use formattedSongs.forEach(function(formattedSong) { ... })
+    formattedSongs.forEach(function(formattedSong){
+        songsHTML += "<div class='song-item'>" + formattedSong + "</div>";
+    })
 
     // Inside the forEach, add to songsHTML like:
     // songsHTML += "<div class='song-item'>" + formattedSong + "</div>";
@@ -286,7 +298,9 @@ function searchForSong() {
 
     // TODO: Use .indexOf() to find the song
     // MDN Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
-    let position = // Your code here - use mySongs.indexOf(searchTerm)
+    let position = mySongs.indexOf(searchTerm);
+
+        // Your code here - use mySongs.indexOf(searchTerm)
 
     // TODO: Check if song was found and show appropriate message
     // HINT: indexOf returns -1 if not found, or the index if found
@@ -314,7 +328,9 @@ function checkIfSongExists() {
 
     // TODO: Use .includes() to check if song exists
     // MDN Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
-    let exists = // Your code here - use mySongs.includes(searchTerm)
+    let exists = mySongs.includes(searchTerm);
+        
+        // Your code here - use mySongs.includes(searchTerm)
 
     // TODO: Show appropriate message
     if (exists) {
@@ -344,7 +360,8 @@ function getTopThreeSongs() {
     // TODO: Use destructuring to get first three songs
     // MDN Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring
     // HINT: let [first, second, third] = mySongs;
-    let [first, second, third] = // Your code here
+    let [first, second, third] = mySongs;
+        // Your code here
 
     showMessage("✅ Top 3 songs using destructuring: 1) " + first + " 2) " + second + " 3) " + third);
 }
@@ -358,7 +375,8 @@ function separateFirstSong() {
 
     // TODO: Use destructuring to get first song and rest
     // HINT: let [first, ...others] = mySongs;
-    let [first, ...others] = // Your code here
+    let [first, ...others] = mySongs;
+        // Your code here
 
     showMessage("✅ First song: '" + first + "', Other songs: " + others.length + " using destructuring!");
 }
@@ -396,9 +414,9 @@ function updateDisplays() {
 
 // Test array creation
 console.log("My Songs:", mySongs);
-console.log("My Artists:", myArtists);
-console.log("Genres:", genres);
-console.log("Favorites:", favorites);
+//console.log("My Artists:", myArtists);
+//console.log("Genres:", genres);
+//console.log("Favorites:", favorites);
 
 // ===========================================
 // WHAT TO DO NEXT
