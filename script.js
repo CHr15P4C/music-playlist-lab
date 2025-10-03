@@ -413,7 +413,7 @@ function updateDisplays() {
 // Uncomment these lines one by one to test your functions:
 
 // Test array creation
-console.log("My Songs:", mySongs);
+//console.log("My Songs:", mySongs);
 //console.log("My Artists:", myArtists);
 //console.log("Genres:", genres);
 //console.log("Favorites:", favorites);
