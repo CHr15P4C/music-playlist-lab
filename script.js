@@ -113,7 +113,7 @@ function showMusicStats() {
 
 // TODO: Complete this function to add a song to the end
 function addSongToEnd() {
-    mySongs.push("Basket Case");
+    mySongs.push("New Song");
     // TODO: Use .push() method to add "New Song" to mySongs
     // MDN Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
     // Your code here - use mySongs.push("New Song")
@@ -130,7 +130,7 @@ function addSongToEnd() {
 
 // TODO: Complete this function to add a song to the beginning
 function addSongToBeginning() {
-    mySongs.unshift("Good Riddance");
+    mySongs.unshift("First Song");
     // TODO: Use .unshift() method to add "First Song" to mySongs
     // MDN Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
     // Your code here - use mySongs.unshift("First Song")
