@@ -40,17 +40,17 @@ let favorites = [
 function displaySelectedSongs() {
     // TODO: Get the first song from mySongs (index 0)
     // MDN Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#accessing_array_elements
-    let firstSong = mySongs[0]
+    let firstSong = mySongs[0];
         // Your code here
 
     // TODO: Get the last song from mySongs
     // HINT: Use mySongs.length - 1 for the last index
-    let lastSong = mySongs[mySongs.length -1]
+    let lastSong = mySongs[mySongs.length -1];
         // Your code here
 
     // TODO: Get the middle song from mySongs
     // HINT: Use Math.floor(mySongs.length / 2) for middle index
-    let middleSong = mySongs[Math.floor(mySongs.length / 2)]
+    let middleSong = mySongs[Math.floor(mySongs.length / 2)];
         // Your code here
 
     // DOM operations handled for you - focus on the array logic above
@@ -69,16 +69,20 @@ function displaySelectedSongs() {
 function showMusicStats() {
     // TODO: Count songs using .length property
     // MDN Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length
-    let songCount = // Your code here - use mySongs.length
+    let songCount = mySongs.length;
+    // Your code here - use mySongs.length
 
     // TODO: Count artists using .length property
-    let artistCount = // Your code here - use myArtists.length
+    let artistCount = myArtists.length;
+    // Your code here - use myArtists.length
 
     // TODO: Count genres using .length property
-    let genreCount = // Your code here - use genres.length
+    let genreCount = genres.length;
+    // Your code here - use genres.length
 
     // TODO: Count favorites using .length property
-    let favoritesCount = // Your code here - use favorites.length
+    let favoritesCount = favorites.length;
+    // Your code here - use favorites.length
 
     // Check if arrays are properly filled
     if (mySongs.length === 0) {
@@ -109,6 +113,7 @@ function showMusicStats() {
 
 // TODO: Complete this function to add a song to the end
 function addSongToEnd() {
+    mySongs.push("Basket Case");
     // TODO: Use .push() method to add "New Song" to mySongs
     // MDN Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
     // Your code here - use mySongs.push("New Song")
@@ -125,6 +130,7 @@ function addSongToEnd() {
 
 // TODO: Complete this function to add a song to the beginning
 function addSongToBeginning() {
+    mySongs.unshift("Good Riddance");
     // TODO: Use .unshift() method to add "First Song" to mySongs
     // MDN Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
     // Your code here - use mySongs.unshift("First Song")
@@ -149,11 +155,14 @@ function addRandomToFavorites() {
 
     // TODO: Pick a random song from mySongs
     // HINT: Use Math.floor(Math.random() * mySongs.length)
-    let randomIndex = // Your code here
-    let randomSong = // Your code here - use mySongs[randomIndex]
+    let randomIndex = Math.floor(Math.random() * mySongs.length);
+        // Your code here
+    let randomSong = mySongs[randomIndex];
+    // Your code here - use mySongs[randomIndex]
 
     // TODO: Add it to favorites using .push()
     // Your code here - use favorites.push(randomSong)
+    favorites.push(randomSong);
 
     // DOM operations handled for you - focus on the array logic above
     updateDisplays();
@@ -174,7 +183,8 @@ function removeLastSong() {
 
     // TODO: Use .pop() to remove and get the last song
     // MDN Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
-    let removedSong = // Your code here - use mySongs.pop()
+    let removedSong = mySongs.pop();
+    // Your code here - use mySongs.pop()
 
     // DOM operations handled for you - focus on the array logic above
     updateDisplays();
@@ -191,7 +201,8 @@ function removeFirstSong() {
 
     // TODO: Use .shift() to remove and get the first song
     // MDN Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift
-    let removedSong = // Your code here - use mySongs.shift()
+    let removedSong = mySongs.shift();
+    // Your code here - use mySongs.shift()
 
     // DOM operations handled for you - focus on the array logic above
     updateDisplays();
